@@ -14,10 +14,6 @@ import java.util.logging.Logger;
 import model.Major;
 import model.Student;
 
-/**
- *
- * @author Khangnekk
- */
 public class StudentDBContext extends DBContext<Student> {
 
     @Override
@@ -52,7 +48,7 @@ public class StudentDBContext extends DBContext<Student> {
                 String name = rs.getString("stuname");
                 String email = rs.getString("stuemail");
                 boolean gender = rs.getBoolean("stugender");
-                Date dob = rs.getDate("studob");
+                Date dob = rs.getDate("studob`");
                 String phone = rs.getString("stuphone");
                 String address = rs.getString("stuaddress");
                 int mid = rs.getInt("mid");
@@ -93,7 +89,7 @@ public class StudentDBContext extends DBContext<Student> {
                 String name = rs.getString("stuname");
                 String email = rs.getString("stuemail");
                 boolean gender = rs.getBoolean("stugender");
-                Date dob = rs.getDate("studob");
+                Date dob = rs.getDate("studob`");
                 String phone = rs.getString("stuphone");
                 String address = rs.getString("stuaddress");
                 int mid = rs.getInt("mid");
