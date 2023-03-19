@@ -13,10 +13,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Lecturer;
 
-/**
- *
- * @author Khangnekk
- */
 public class LecturerDBContext extends DBContext<Lecturer> {
 
     @Override

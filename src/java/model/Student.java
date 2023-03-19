@@ -5,13 +5,9 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 
 
-/**
- *
- * @author Khangnekk
- */
 public class Student {
     private int id;
     private String name;

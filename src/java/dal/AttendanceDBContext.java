@@ -55,8 +55,8 @@ public class AttendanceDBContext extends DBContext<Attendance> {
                 String des = rs.getString("description");
                 a.setPresent(present);
                 a.setDescription(des);
-
-                a.setStudent(students.stream().filter(t -> t.getId() == stuid).findAny().get());
+                a.setStudent(stuDB.get(stuid));
+             //   a.setStudent(students.stream().filter(t -> t.getId() == stuid).findAny().get());
                 a.setSession(sessions.stream().filter(t -> t.getId() == seid).findAny().get());
                 attendances.add(a);
             }

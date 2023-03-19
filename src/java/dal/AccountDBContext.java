@@ -98,5 +98,11 @@ public class AccountDBContext extends DBContext<Account> {
     public ArrayList<Account> list() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    public static void main(String[] args) {
+        AccountDBContext account = new AccountDBContext();
+        Account acc = account.get("ntnm2003@gmail.com", "222003");
+        System.out.println(acc.getUsername());
+    }
 
 }
