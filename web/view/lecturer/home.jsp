@@ -102,9 +102,7 @@
                         <div class="banner">
                             <img style="width: 100%; border-radius: 9px;" src="assets/download/TBFAP.png">
                         </div>
-                        <div >
-
-                        </div>
+                       
                     </div>
                 </div>
             </div>
