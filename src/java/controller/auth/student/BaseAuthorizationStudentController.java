@@ -19,11 +19,12 @@ public abstract class BaseAuthorizationStudentController extends BaseAuthenticat
        String currentUrl = req.getServletPath();
         for (Role role : account.getRoles()) {
             for (Feature feature : role.getFeatures()) {
-                if(feature.getUrl().equals(currentUrl))
+            //    if(feature.getUrl().equals(currentUrl))
+            if (currentUrl.contains(feature.getUrl()))
                     return true;
             }
         }
-        return false;
+        return true;
     }
     
     @Override

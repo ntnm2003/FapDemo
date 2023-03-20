@@ -26,7 +26,7 @@ public abstract class BaseAuthorizationController extends BaseAuthenticationCont
                     return true;
             }
         }
-        return true;
+        return false;
     }
     
     @Override

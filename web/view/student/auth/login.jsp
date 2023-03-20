@@ -1,143 +1,159 @@
-<%-- 
-    Document   : login
-    Created on : Oct 17, 2022, 9:29:29 PM
-    Author     : Khangnekk
---%>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+/* Made with love by Mutiullah Samim*/
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <style>
+        html,body{
+            background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            font-family: 'Numans', sans-serif;
+        }
 
+        .container{
+            height: 100%;
+            align-content: center;
+        }
+
+        .card{
+            height: 370px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 400px;
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+
+        .social_icon span{
+            font-size: 60px;
+            margin-left: 10px;
+            color: #FFC312;
+        }
+
+        .social_icon span:hover{
+            color: white;
+            cursor: pointer;
+        }
+
+        .card-header h3{
+            color: white;
+        }
+
+        .social_icon{
+            position: absolute;
+            right: 20px;
+            top: -45px;
+        }
+
+        .input-group-prepend span{
+            width: 50px;
+            background-color: #FFC312;
+            color: black;
+            border:0 !important;
+        }
+
+        input:focus{
+            outline: 0 0 0 0  !important;
+            box-shadow: 0 0 0 0 !important;
+
+        }
+
+        .remember{
+            color: white;
+        }
+
+        .remember input
+        {
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+            margin-right: 5px;
+        }
+
+        .login_btn{
+            color: black;
+            background-color: #FFC312;
+            width: 100px;
+        }
+
+        .login_btn:hover{
+            color: black;
+            background-color: white;
+        }
+
+        .links{
+            color: white;
+        }
+
+        .links a{
+            margin-left: 4px;
+        }
+    </style>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/myStyle/Style.css">
-        <link rel="icon" href="assets/favicon/fu-favicon.jpg">
-        <title>Login as Student</title>
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            
-            p{
-                color: red;
-                font-weight: bold;
-            }
+        <title>Login Page</title>
+        <!--Made with love by Mutiullah Samim -->
 
-            .main{
-                background-image: url("assets/download/bg.jpg");
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        <!--Bootsrap 4 CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-            .glass{
-                background: white;
-                min-height: 70vh;
-                width: 70%;
-                padding: 1rem;
-                border-radius: 2rem;
-                background: linear-gradient(to right bottom,
-                    rgba(59, 121, 255,0.7)
-                    ,rgba(255, 65, 230, 0.3));
-                display: flex;
-                backdrop-filter: blur(0.75rem);
-            }
+        <!--Fontawesome CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-            .notification{
-                width: 60%;
-                color: white;
-                text-align: center;
-                margin-top: 2rem;
-                padding: 1rem;
-                font-family: 'Courier New', Courier, monospace;
-            }
-
-            .login{
-                text-align: center;
-                margin-top: 3rem;
-                width: 40%;
-                padding: 1rem;
-                font-family: 'Courier New', Courier, monospace;
-                border-left: 2px solid #ccc;
-            }
-
-            .login-form{
-                margin-top: 1rem;
-            }
-
-            input{
-                background-color: azure;
-                margin-top: 1rem;
-                border-radius: 2rem;
-                font-family: 'Courier New', Courier, monospace;
-            }
-            .usernameAndPassword{
-                width: 80%;
-                height: 2rem;
-                padding: 0 0.5rem;
-                border: 1px solid background;
-            }
-            .loginBtn{
-                width: 20%;
-                height: 2rem;
-                border: 1px solid background;
-                font-weight: bold;
-                font-size: large;
-            }
-
-
-            @media screen and (max-width: 600px){
-                .notification{
-                    display: none;
-                }
-                .login{
-                    width: 100%;
-                    padding: 0;
-                    border-left: 0ch;
-                }
-                .loginBtn{
-                    width: 30%;
-                }
-            }
-        </style>
+        <!--Custom styles-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
-
     <body>
-        <div class="main">
-            <div class="glass">
-                <div class="notification">
-                    <h4>Nice to see you again</h4>
-                    <h1>WELCOME BACK</h1>
-                    <div class="abc">
-                        <img style="width: 400px; height: 212px;margin-top: 2rem;"
-                             src="https://www.mystudentplan.ca/_images/student-plan-landing.png">
+        <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Sign In</h3>
+                        <div class="d-flex justify-content-end social_icon">
+                            <span><i class="fab fa-facebook-square"></i></span>
+                            <span><i class="fab fa-google-plus-square"></i></span>
+                            <span><i class="fab fa-twitter-square"></i></span>
+                        </div>
                     </div>
-                </div>
-                <div class="login">
-                    <img style="width:5rem; height: 5rem; border-radius: 50%; border: 3px solid white;"
-                         src="https://play-lh.googleusercontent.com/IrTWmVR5xviVUO-XH8G2IniRT2gJCY2k2iFPrIfO7-KQR1RrfLplg90orxHaD75Hn21t">
-                    <h2 style="color: white;">Login as Student</h2>
-                    <div class="login-form">
-                        <form action="studentLogin" method="POST">
-                            <input class="usernameAndPassword" type="text" name="email" placeholder="Email"><br>
-                            <input class="usernameAndPassword" type="password" name="password" placeholder="Password"><br><br>
-                            <p>${noti}</p>
-                            <input class="loginBtn" type="submit" value="Login"><br>
-                            <br>
-                            <a href="" style="text-decoration: none; font-weight: bold;">Sign Up</a> |
-                            <a href="" style="text-decoration: none; font-weight: bold;">Forget passsword?</a><br><br>
-                            <a href="login" style="text-decoration: none; font-weight: bold;">Login as Lecturer</a>
+                    <div class="card-body">
+                        <form action="studentLogin" method="post">
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" name="email" placeholder="email">
+
+                            </div>
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" name="password" placeholder="password">
+                            </div>
+                            <div class="row align-items-center remember">
+                                <input type="checkbox">Remember Me
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Login" class="btn float-right login_btn">
+                                <a href="login" style="text-decoration: none; font-weight: bold;">Login as Lecture</a>
+                                <br> 
+                                <br>
+                                <p style="text-decoration: none; font-weight: bold; color: red" >${noti}</p>
+                            </div>
                         </form>
+                    </div>
+                    <div class="card-footer">
+
+                        <div class="d-flex justify-content-center">
+                            <a href="#">Forgot your password?</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </body>
-
 </html>

@@ -1,21 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package controller.auth.student;
 
 import dal.AccountDBContext;
+import dal.StudentDBContext;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.util.List;
 import model.Account;
+import model.Student;
 
-/**
- *
- * @author Khangnekk
- */
 public class StudentLoginController extends HttpServlet {
 
     @Override
@@ -30,8 +26,10 @@ public class StudentLoginController extends HttpServlet {
        String email = request.getParameter("email").trim().toLowerCase();
         String password = request.getParameter("password");
         AccountDBContext db = new AccountDBContext();
+        StudentDBContext stu= new StudentDBContext();
+        List<Student> s= stu.list();
         Account account = db.get(email, password);
-        if(account == null)
+        if(account == null || !stu(s, account.getEmail()))
         {
 //            response.getWriter().println("login failed!");
             request.setAttribute("noti", "* Incorrect email or password");
@@ -42,6 +40,14 @@ public class StudentLoginController extends HttpServlet {
             request.getSession().setAttribute("account", account);
             response.sendRedirect("student_home");
         }
+    }
+       private boolean stu(List<Student> s, String str){
+        
+        for (Student st: s){
+            if (st.getEmail().equalsIgnoreCase(str))
+                return true;
+        }
+        return false;
     }
 
 }
