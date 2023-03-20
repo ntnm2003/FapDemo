@@ -6,10 +6,6 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Khangnekk
- */
 public class Feature {
     private int id;
     private String name;

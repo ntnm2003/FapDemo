@@ -18,10 +18,6 @@ import model.Major;
 import model.Student;
 import model.Subject;
 
-/**
- *
- * @author Khangnekk
- */
 public class GroupDBContext extends DBContext<Group> {
 
     @Override

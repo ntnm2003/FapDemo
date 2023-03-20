@@ -69,13 +69,10 @@
                                 <a href="" ><i class="fa-solid fa-scale-balanced"></i> Regulations</a>
                             </li>
                             <li>
-                                <a href="" ><i class="fa-solid fa-not-equal"></i> Others</a>
+                                <a href="" ><i class="fa-solid fa-not-equal"></i> News</a>
                             </li>
                             <li>
                                 <a href="" ><i class="fa-solid fa-c"></i> FPTU-Coursera</a>
-                            </li>
-                            <li>
-                                <a href="" ><i class="fa-solid fa-building"></i> Dormitory</a>
                             </li>
                             <li>
                                 <a href="" ><i class="fa-solid fa-triangle-exclamation"></i> Important Notice</a>

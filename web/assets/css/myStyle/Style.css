@@ -12,7 +12,7 @@ ul li {
     text-align: center;
     height: 3em;
     width: 100%;
-    background-image: linear-gradient(to right, rgb(201, 41, 198) ,rgb(28, 63, 205));
+    background-image: #B3621C;
     position: fixed;
     z-index: 100;
 }
@@ -81,7 +81,7 @@ ul li {
     z-index: 50;
     position: fixed;
     width: 100%;
-    background-image: linear-gradient(to right,rgb(201, 41, 198) , rgb(28, 63, 205));
+    background-image: #B3621C;
 }
 
 .menu-item-btn {
@@ -100,11 +100,11 @@ ul li {
     margin-right: 0.5em;
     float: right;
     font-size: 22px;
-    color: rgb(85, 85, 85);
+    color: #B3621C;
     padding: 0.25em;
     margin: 0.25em;
     line-height: 22px;
-    border: 2px solid rgb(85, 85, 85);
+    border: 2px solid #B3621C;
     border-radius: 6px;
 }
 
@@ -137,7 +137,7 @@ ul li {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #B3621C;
 }
 
 .welcome{
@@ -156,7 +156,7 @@ ul li {
 .left ul li{
     padding: 5px;
     margin-bottom: 0.1em;
-    border: 2px solid rgb(201, 41, 198);
+    border: 2px solid #B3621C;
     border-radius: 9px;
 }
 .left ul li a{
@@ -170,7 +170,7 @@ ul li {
     color: white;
 }
 .left ul li:hover{
-    background-color: rgb(201, 41, 198);
+    background-color: #B3621C;
 }
 .item{
     border: 2px solid background;
@@ -184,7 +184,7 @@ ul li {
 .dhead{
     text-align: center;
     margin: 3px 0px 3px 0px;
-    background-image: linear-gradient(to left, rgb(201, 41, 198) ,rgb(28, 63, 205));
+    background-image: #B3621C;
 }
 .table{
     height: 100%;
@@ -206,7 +206,7 @@ table tr td {
 }
 
 .table .htable{
-    background-image: linear-gradient(to left, rgb(201, 41, 198) ,rgb(28, 63, 205));
+    background-image: #B3621C;
     color: white;
     text-align: center;
 }
@@ -241,7 +241,7 @@ table tr td {
 
 .table-details .dhead{
     color: white;
-    background-image: linear-gradient(to left, rgb(201, 41, 198) ,rgb(28, 63, 205));
+    background-image: #B3621C;
 }
 .table-details img{
     width: 20px;

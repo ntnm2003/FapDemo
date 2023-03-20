@@ -13,10 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.*;
 
-/**
- *
- * @author Khangnekk
- */
+
 public class SessionDBContext extends DBContext<Session> {
 
     public ArrayList<Session> getSessionByGidAndLeid(int leid_input, int gid_input) {
@@ -398,5 +395,15 @@ public class SessionDBContext extends DBContext<Session> {
         }
         return sessions;
 
+    }
+    public static void main(String[] args) {
+        ArrayList<Session> sessions = new ArrayList<>();
+        GroupDBContext gDB = new GroupDBContext();
+        RoomDBContext rDB = new RoomDBContext();
+        TimeSlotDBContext tiDB = new TimeSlotDBContext();
+        LecturerDBContext leDB = new LecturerDBContext();
+        SessionDBContext s = new SessionDBContext();
+        sessions = s.getSessionByGidAndLeid(1, 1);
+        System.out.println(sessions.get(0).getDate());
     }
 }

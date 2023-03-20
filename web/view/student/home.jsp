@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-md-10 right">
                         <div class="banner">
-                            <img style="width: 100%; border-radius: 9px;" src="assets/download/TBFAP.png">
+                            <img style="width: 100%; border-radius: 9px;" src="assets/download/FAP.png">
                         </div>
                         <div >
 

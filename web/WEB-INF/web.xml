@@ -52,6 +52,10 @@
         <servlet-name>studentAttendanceReport</servlet-name>
         <servlet-class>controller.student.studentAttendanceReport</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StudentLogin</servlet-name>
+        <servlet-class>controller.auth.student.StudentLoginController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>check_Attendance</servlet-name>
         <url-pattern>/takeAttendance</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>studentAttendanceReport</servlet-name>
         <url-pattern>/studentAttendanceReport</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentLogin</servlet-name>
+        <url-pattern>/studenLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
